@@ -1,44 +1,73 @@
 #include <stdio.h>
 
-struct Robot
-{
+struct Robot {
     int id;
-    char type[30];
-    float capacity, load, time;
+    char type[20];
+    float capacity;
+    float load;
+    float time;
 };
 
-int main(void)
+int main()
 {
-    struct Robot r[100];
+    struct Robot r[50];
     int n, i;
     float utilization;
 
-    printf("Enter the number of robots: ");
+    printf("Enter number of robots\n");
     scanf("%d", &n);
 
-    for (i = 0; i < n; i++)
+    if (n < 1 || n > 50)
     {
-        printf("Enter ID, type, capacity, load and time:\n");
-        scanf("%d %29s %f %f %f", &r[i].id, r[i].type,
-              &r[i].capacity, &r[i].load, &r[i].time);
+        printf("Invalid number of robots\n");
+        return 0;
     }
 
-    printf("\n%-3s %-8s %7s %6s %5s %7s %s\n",
-           "ID", "Type", "Capacity", "Load", "Time",
-           "Util.(%)", "Status");
+    for (i = 0; i < n; i++)
+    {
+        printf("\n Enter details of robot %d\n", i + 1);
+
+        printf("Robot ID: ");
+        scanf("%d", &r[i].id);
+
+        printf("Robot Type: ");
+        scanf("%19s", r[i].type);
+
+        printf("Payload Capacity (kg): ");
+        scanf("%f", &r[i].capacity);
+
+        printf("Actual load (kg): ");
+        scanf("%f", &r[i].load);
+
+        printf("Operating Time: ");
+        scanf("%f", &r[i].time);
+    }
+
+    printf("\n Robot Load Report \n");
 
     for (i = 0; i < n; i++)
     {
+        if (r[i].capacity <= 0)
+        {
+            printf("\n Robot ID: %d", r[i].id);
+            printf("\n Invalid payload capacity \n");
+        }
+
         utilization = (r[i].load / r[i].capacity) * 100;
 
-        printf("%-3d %-8s %7.2f %6.2f %5.2f %7.2f ",
-               r[i].id, r[i].type, r[i].capacity,
-               r[i].load, r[i].time, utilization);
+        printf("\nRobot ID: %d", r[i].id);
+        printf("\nRobot type: %s", r[i].type);
+        printf("\n operating Time: %.2f hours", r[i].time);
+        printf("\n Load Utilization: %.2f%%", utilization);
 
-        if (r[i].load > r[i].capacity)
-            printf("Overloaded\n");
+        if (utilization > 100)
+        {
+            printf("\n Status: overloaded \n");
+        }
         else
-            printf("Within Limit\n");
+        {
+            printf("\n Status: within capacity \n");
+        }
     }
 
     return 0;
