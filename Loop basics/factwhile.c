@@ -1,12 +1,12 @@
 #include<stdio.h>
 int main(){
     int n , fact=1 , i=1;
-    printf("Enter n");
+    printf("Enter n: ");
     scanf("%d", &n);
     while(i<=n){
         fact=fact*i;
         i++;
     }
-    printf("Factorial of n numbers = %d",  fact);
+    printf("Factorial of n numbers = %d\n",  fact);
  return 0;
 }

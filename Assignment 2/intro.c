@@ -1,5 +1,5 @@
 #include<stdio.h>
 int main(){
-    printf("Student Introduction\n Name:  Aarush\n Class:  First year");
+    printf("Student Introduction\nName: Aarush\nClass: First year\n");
     return 0;
 }

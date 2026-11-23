@@ -101,6 +101,7 @@ void main() {
         case 8:
             printf("Enter string: ");
             fgets(str1, 100, stdin);
+            str1[strcspn(str1, "\n")] = '\0';
             for (int i = 0; str1[i] != '\0'; i++) {
             if (str1[i] >= 'a' && str1[i] <= 'z')   
             str1[i] = str1[i] - 32;
@@ -111,6 +112,7 @@ void main() {
         case 9:
             printf("Enter string: ");
             fgets(str1, 100, stdin);
+            str1[strcspn(str1, "\n")] = '\0';
             for (int i = 0; str1[i] != '\0'; i++) {
             if (str1[i] >= 'A' && str1[i] <= 'Z')   
             str1[i] = str1[i] + 32;

@@ -6,7 +6,7 @@ int factorial(int n){
   return fact;
 }
 int main(){
-   int n=5 ;
-   printf("Factorial =%d\n" , factorial(n));
+   int n=5;
+   printf("Factorial = %d\n", factorial(n));
    return 0;
 }

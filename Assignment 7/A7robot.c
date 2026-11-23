@@ -23,7 +23,7 @@ int main(void)
               &r[i].capacity, &r[i].load, &r[i].time);
     }
 
-    printf("\n%-4s %-15s %8s %7s %6s %8s  %s\n",
+    printf("\n%-3s %-8s %7s %6s %5s %7s %s\n",
            "ID", "Type", "Capacity", "Load", "Time",
            "Util.(%)", "Status");
 
@@ -31,7 +31,7 @@ int main(void)
     {
         utilization = (r[i].load / r[i].capacity) * 100;
 
-        printf("%-4d %-15s %8.2f %7.2f %6.2f %8.2f  ",
+        printf("%-3d %-8s %7.2f %6.2f %5.2f %7.2f ",
                r[i].id, r[i].type, r[i].capacity,
                r[i].load, r[i].time, utilization);
 

@@ -2,7 +2,7 @@
 int main(){
     int choice;
     do{
-        printf("\n1. Say Hello\n2. Exit");
+        printf("\n1. Say Hello\n2. Exit\nChoice: ");
         scanf("%d",&choice);
         if (choice==1)
            printf("Hello\n");

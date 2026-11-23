@@ -1,5 +1,5 @@
 #include<stdio.h>
 int main(){
-    printf("\nAarush\n age: 18\n city: pune");
+    printf("Aarush\nage: 18\ncity: Pune\n");
     return 0;
 }
