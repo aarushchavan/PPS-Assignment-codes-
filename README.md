@@ -14,4 +14,7 @@ Batch: 3
 - [Assignment 5](Assignment%205/README.md)
 - [Assignment 6](Assignment%206/README.md)
 - [Assignment 7](Assignment%207/README.md)
+- [Assignment 8](Assignment%208/README.md)
+- [Assignment 9](Assignment%209/README.md)
+- [Assignment 10](Assignment%2010/README.md)
 - [Loop basics](Loop%20basics/README.md)
